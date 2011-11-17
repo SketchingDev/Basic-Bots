@@ -1,0 +1,6 @@
+# Generated FlashDevelop files
+build/FlashDevelop/obj/*
+build/FlashDevelop/bin/*
+
+# Documentation containing absolute paths
+docs/*
