@@ -18,34 +18,34 @@
 
 package com.flyingtophat.physics 
 {
-	
-	/**
-	 * @author <a href="http://flyingtophat.co.uk">Lucas</a>
-	 */
-	public class Velocity 
-	{
-		/** Radian value representing direction */
-		public var direction:Number;
-		public var speed:Number;
-		
-		/**
-		 * @param	direction Direction in radians
-		 */
-		public function Velocity(direction:Number = 0, speed:Number = 0) 
-		{
-			this.direction = direction;
-			this.speed = speed;
-		}
-		
-		/**
-		 * Inverts the direction of the velocity
-		 */
-		public function invertDirection():void
-		{
-			direction = direction + Math.PI;
-			direction = direction % (Math.PI * 2);
-		}
-		
-	}
+    
+    /**
+     * @author <a href="http://flyingtophat.co.uk">Lucas</a>
+     */
+    public class Velocity 
+    {
+        /** Radian value representing direction */
+        public var direction:Number;
+        public var speed:Number;
+        
+        /**
+         * @param    direction Direction in radians
+         */
+        public function Velocity(direction:Number = 0, speed:Number = 0) 
+        {
+            this.direction = direction;
+            this.speed = speed;
+        }
+        
+        /**
+         * Inverts the direction of the velocity
+         */
+        public function invertDirection():void
+        {
+            direction = direction + Math.PI;
+            direction = direction % (Math.PI * 2);
+        }
+        
+    }
 
 }

@@ -18,46 +18,46 @@
 
 package com.flyingtophat.basicbot
 {
-	import com.flyingtophat.geometry.Circle;
-	import flash.display.Sprite;
-	
-	public interface IBot
-	{
-		/**
-		 * Represents the bot's body
-		 */
+    import com.flyingtophat.geometry.Circle;
+    import flash.display.Sprite;
+    
+    public interface IBot
+    {
+        /**
+         * Represents the bot's body
+         */
         function get body():Circle;
 
         /**
-		 * Called when another bot enters this bot's proximity.
-		 * Allowing for them to influence eachother.
-		 *
-		 * It is within this stage that the bot's state should
-		 * be changed, ready for the wake() method to be called.
-		 */
-		function communicate(bot:IBot):void;
-
-		/**
-		 * Wakes the bot up inorder to allow it to act/react
-		 * to any bots that communicated with it.
-		 */
-		function wake():void;
-
-		/**
-		 * Tells the bot that it's about to die.
-		 * A good time to remove any strongly referenced event listeners etc.
-		 */
-		function die():void;
+         * Called when another bot enters this bot's proximity.
+         * Allowing for them to influence eachother.
+         *
+         * It is within this stage that the bot's state should
+         * be changed, ready for the wake() method to be called.
+         */
+        function communicate(bot:IBot):void;
 
         /**
-		 * Tests for a collision between two bots
-		 */
-		function hitTest(bot:IBot):Boolean;
+         * Wakes the bot up inorder to allow it to act/react
+         * to any bots that communicated with it.
+         */
+        function wake():void;
 
-		function get x():Number;
-		function set x(position:Number):void;
-		function get y():Number;
-		function set y(position:Number):void;
-	}
-	
+        /**
+         * Tells the bot that it's about to die.
+         * A good time to remove any strongly referenced event listeners etc.
+         */
+        function die():void;
+
+        /**
+         * Tests for a collision between two bots
+         */
+        function hitTest(bot:IBot):Boolean;
+
+        function get x():Number;
+        function set x(position:Number):void;
+        function get y():Number;
+        function set y(position:Number):void;
+    }
+    
 }

@@ -18,36 +18,36 @@
 
 package com.flyingtophat.geometry
 {
-	
-	/**
-	 * @author <a href="http://flyingtophat.co.uk">Lucas</a>
-	 */
-	public class Circle
-	{
-		public var x:Number;
-		public var y:Number;
-		public var radius:Number;
-		
-		public function Circle(x:Number = 0, y:Number = 0, radius:Number = 0)
-		{
-			this.x = x;
-			this.y = y;
-			this.radius = radius;
-		}
-		
-		/**
-		 * Tests for an intersection with another circle.
-		 * @param	circle	Circle to test against for an intersection
-		 * @return	Returns true upon detecting an intersection,
-		 *  else false
-		 */
-		public function intersects(circle:Circle):Boolean
-		{
-			return (this.radius + circle.radius) * (this.radius + circle.radius)
+    
+    /**
+     * @author <a href="http://flyingtophat.co.uk">Lucas</a>
+     */
+    public class Circle
+    {
+        public var x:Number;
+        public var y:Number;
+        public var radius:Number;
+        
+        public function Circle(x:Number = 0, y:Number = 0, radius:Number = 0)
+        {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+        
+        /**
+         * Tests for an intersection with another circle.
+         * @param    circle    Circle to test against for an intersection
+         * @return    Returns true upon detecting an intersection,
+         *  else false
+         */
+        public function intersects(circle:Circle):Boolean
+        {
+            return (this.radius + circle.radius) * (this.radius + circle.radius)
                     > ((this.x - circle.x) * (this.x - circle.x) +
-					  (this.y - circle.y) * (this.y - circle.y));
-		}
-		
-	}
+                      (this.y - circle.y) * (this.y - circle.y));
+        }
+        
+    }
 
 }
